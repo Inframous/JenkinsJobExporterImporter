@@ -27,5 +27,6 @@ $ docker run --rm -it \
      -e IMPORT_FOLDER=<optional_import_folder_path> \
      jenkins-job-exporter-importer:latest
 ```
-### Note: 
-The exported jobs will be downloaded to ```/var/jobs``` <b>inside</b> the container, so make sure to mount a local folder to that location.
+### Notes: 
+- The exported jobs will be downloaded to ```/var/jobs``` <b>inside</b> the container, so make sure to mount a local folder to that location.
+- This might not work if your Jenkins Server is behind a Reversed Proxy, if you encounter problems try pointing to the server directly.
