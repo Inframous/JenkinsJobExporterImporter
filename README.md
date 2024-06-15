@@ -19,7 +19,7 @@ To run the Docker container with this image, use the following commands to clone
 $ git clone https://github.com/Inframous/JenkinsJobExporterImporter.git
 $ cd JenkinsJobExporterImporter
 $ docker build -t jenkins-job-exporter-importer .
-$ docker run -d \
+$ docker run -it \
      -e JENKINS_URL=<your_jenkins_url> \
      -e JENKINS_USER=<your_jenkins_user> \
      -e JENKINS_TOKEN=<your_jenkins_token> \
