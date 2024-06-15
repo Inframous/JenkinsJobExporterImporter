@@ -19,9 +19,13 @@ To run the Docker container with this image, use the following commands to clone
 $ git clone https://github.com/Inframous/JenkinsJobExporterImporter.git
 $ cd JenkinsJobExporterImporter
 $ docker build -t jenkins-job-exporter-importer .
-$ docker run -it \
+$ docker run --rm -it \
+     -v ./my_job:/var/jobs
      -e JENKINS_URL=<your_jenkins_url> \
      -e JENKINS_USER=<your_jenkins_user> \
      -e JENKINS_TOKEN=<your_jenkins_token> \
      -e IMPORT_FOLDER=<optional_import_folder_path> \
      jenkins-job-exporter-importer:latest
+```
+### Note: 
+The exported jobs will be downloaded to ```/var/jobs``` <b>inside</b> the container, so make sure to mount a local folder to that location.
