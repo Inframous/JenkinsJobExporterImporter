@@ -3,7 +3,7 @@ FROM alpine:latest
 
 # Install necessary packages
 RUN apk update && apk add --no-cache \
-    openjdk11-jre \
+    openjdk17-jre \
     curl \
     jq \
     dialog \
